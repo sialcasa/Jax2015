@@ -1,0 +1,3 @@
+Fill color presenter
+
+- Komplettes umstylen der Anwendung -> Flatter + undecorator
