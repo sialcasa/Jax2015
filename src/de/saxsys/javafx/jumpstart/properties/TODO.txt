@@ -1,6 +1,0 @@
-EVENTLISTENER
-FIltered Lists
-
-Person lists 2 beispiele
-- Links komplette Personenliste mit mgl personen anzulegen
-- Rechts gefilterte Liste, die sich immer aktualisiert, wenn neue person angelegt wird
