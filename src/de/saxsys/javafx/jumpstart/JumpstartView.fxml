@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox stylesheets="@JumpstartView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -51,13 +52,22 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <fx:include source="createperson/CreatePersonView.fxml" />
+            <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox styleClass="containerspacing" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <fx:include source="createperson/CreatePersonView.fxml" />
+                        <fx:include source="displaypersons/DisplayPersonView.fxml" />
+                     </children>
+                  </VBox>
+                  <fx:include source="statistic/StatisticsView.fxml" />
+               </children>
+               <styleClass>
+                  <String fx:value="containerpadding" />
+                  <String fx:value="containerspacing" />
+               </styleClass>
+            </HBox>
          </children>
     </AnchorPane>
-      <fx:include source="displaypersons/DisplayPersonView.fxml" />
   </children>
-  <stylesheets>
-    <URL value="@JumpstartView.css" />
-  </stylesheets>
 </VBox>

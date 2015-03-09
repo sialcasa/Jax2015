@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.saxsys.javafx.jumpstart.displaypersons.DisplayPersonView">
+   <children>
+      <TitledPane collapsible="false" layoutX="10.0" layoutY="10.0" text="Persons" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox spacing="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="BASELINE_RIGHT" spacing="5.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label alignment="BASELINE_CENTER" text="Suche" />
+                        <TextField fx:id="tf_searchperson" maxWidth="1.7976931348623157E308" promptText="Name der Person" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="lv_persons" focusTraversable="false" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
