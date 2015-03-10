@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox stylesheets="@JumpstartView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxWidth="1.7976931348623157E308" stylesheets="@JumpstartView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.saxsys.javafx.jumpstart.JumpstartView">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -50,17 +50,37 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <HBox maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox styleClass="containerspacing" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <fx:include source="createperson/CreatePersonView.fxml" />
-                        <fx:include source="displaypersons/DisplayPersonView.fxml" />
+                        <fx:include fx:id="import_createPerson" source="createperson/CreatePersonView.fxml" />
+                        <fx:include fx:id="import_displayPersons" source="displaypersons/DisplayPersonView.fxml" />
                      </children>
                   </VBox>
-                  <fx:include source="statistic/StatisticsView.fxml" />
+                  <TabPane tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+                    <tabs>
+                      <Tab text="Sammeln">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <fx:include fx:id="import_crawler" source="datacrawler/CrawlView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Auswerten">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <fx:include fx:id="import_crawlResults" source="crawlresults/CrawlResultsView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
                </children>
                <styleClass>
                   <String fx:value="containerpadding" />
