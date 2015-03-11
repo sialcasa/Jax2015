@@ -11,6 +11,8 @@ public class Person {
     StringProperty firstname = new SimpleStringProperty();
     StringProperty lastname = new SimpleStringProperty();
 
+    ListProperty<String> informations = new SimpleListProperty<>();
+
     ListProperty<String> resources = new SimpleListProperty<>(FXCollections.observableArrayList());
 
     public Person(String firstname, String lastname) {
@@ -52,6 +54,10 @@ public class Person {
 
     public void setResources(final javafx.collections.ObservableList<java.lang.String> resources) {
         this.resourcesProperty().set(resources);
+    }
+
+    public ListProperty<String> informationsProperty() {
+        return this.informations;
     }
 
 }
