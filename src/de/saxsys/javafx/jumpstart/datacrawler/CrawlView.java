@@ -3,8 +3,10 @@ package de.saxsys.javafx.jumpstart.datacrawler;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
+import javafx.concurrent.Worker.State;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import netscape.javascript.JSObject;
@@ -21,6 +23,9 @@ public class CrawlView {
 
     @FXML
     private WebView wv_personinfo;
+
+    @FXML
+    private ProgressIndicator pi_loading;
 
     private final SimpleObjectProperty<Person> displayPerson = new SimpleObjectProperty<>();
 
@@ -55,9 +60,8 @@ public class CrawlView {
                             executejQuery(wv_personinfo.getEngine(), Scripts.getStyleObject);
                         });
 
-        // executejQuery(wv_personinfo.getEngine(), "$(\"a\").click(function(event){"
-        // + "  event.preventDefault();" + "  $(this).hide(\"slow\"); java.target(\"slow\");"
-        // + "});");
+        pi_loading.visibleProperty().bind(
+                wv_personinfo.getEngine().getLoadWorker().stateProperty().isEqualTo(State.RUNNING));
 
     }
 

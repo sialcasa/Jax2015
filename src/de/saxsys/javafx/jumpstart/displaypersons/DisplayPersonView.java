@@ -67,7 +67,7 @@ public class DisplayPersonView {
                         DropShadow dropShadow = new DropShadow(0, Color.ORANGE);
                         tf_searchperson.setEffect(dropShadow);
 
-                        KeyValue keyValue = new KeyValue(dropShadow.radiusProperty(), 10);
+                        KeyValue keyValue = new KeyValue(dropShadow.radiusProperty(), 20);
                         KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.5), keyValue);
                         Timeline timeline = new Timeline(keyFrame);
                         timeline.setAutoReverse(true);

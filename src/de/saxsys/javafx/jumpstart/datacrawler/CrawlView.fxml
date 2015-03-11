@@ -13,7 +13,12 @@
       <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="containerspacing" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ChoiceBox fx:id="cb_source" maxWidth="1.7976931348623157E308" />
-            <WebView fx:id="wv_personinfo" minHeight="200.0" minWidth="200.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+            <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <children>
+                  <WebView fx:id="wv_personinfo" minHeight="200.0" minWidth="200.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+                  <ProgressIndicator fx:id="pi_loading" maxHeight="50.0" maxWidth="50.0" prefHeight="50.0" prefWidth="50.0" />
+               </children>
+            </StackPane>
          </children>
       </VBox>
    </children>
