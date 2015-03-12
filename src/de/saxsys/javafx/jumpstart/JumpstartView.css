@@ -1,3 +1,13 @@
+.root{
+    -my-color:rgb(141,162,188);
+    -fx-outer-border: -my-color;
+    -fx-inner-border: -my-color;
+    
+    -fx-base:rgb(230,230,230);
+    -fx-focus-color:rgb(239,220,200);
+    -button-color:lightgray;
+}
+
 .menu-bar {
     -fx-background-color: #aeb5ba, linear-gradient(to bottom, #ecf4fa 0%, #ced4d9 100%);
     -fx-background-insets: 0, 0 0 1 0;
@@ -14,3 +24,104 @@
 .containerspacing{
     -fx-spacing:10;
 }
+
+.noanchorpadding > * > * > AnchorPane {
+    -fx-padding: 0;
+}
+
+.tab {
+    -fx-focus-color:transparent;
+    -fx-faint-focus-color:transparent;
+    -fx-font-size: 15pt;
+}
+
+.menu-bar {
+    -fx-background-color: transparent;
+}
+
+.menu-bar .menu-button{
+    -fx-background-color: transparent;
+}
+
+.titled-pane > .title {
+    -fx-background-color: -my-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+     -fx-font-size: 15pt;
+    -fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+}
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    /* TODO should not be using text-box-border I tink? */
+    -fx-background-color:transparent;
+    
+}
+
+.tab-header-area {
+ -fx-padding: 0;
+}
+
+.tab{
+    -fx-background-color:-my-color;
+    -fx-background-radius:0;
+    -fx-padding:10;
+    -fx-background-insets: 0;
+}
+.tab:selected{
+    -fx-background-color: derive(-my-color,-20%);
+    -fx-text-fill:white;
+}
+.tab:selected .tab-label{
+    -fx-text-fill:white;
+}
+
+.titled-pane > *.content 
+{
+-fx-border-color:transparent;
+ }
+
+
+/*
+ * Button
+ */
+ 
+ .button,
+.toggle-button,
+.radio-button > .radio,
+.check-box > .box,
+.menu-button,
+.choice-box,
+.color-picker.split-button > .color-picker-label,
+.combo-box-base,
+.combo-box-base > .arrow-button {
+    -fx-background-color: -button-color; 
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.333333em 0.666667em 0.416667em 0.666667em; /* 4 8 5 8 */
+    -fx-text-fill: -fx-text-base-color;
+}
+.button:focused,
+.toggle-button:focused,
+.radio-button:focused > .radio,
+.check-box:focused > .box,
+.menu-button:focused,
+.choice-box:focused,
+.color-picker.split-button:focused > .color-picker-label,
+.combo-box-base:focused {
+    -fx-background-color: -button-color; 
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0;
+}
+
+.text-field {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-color: white;
+}
+
+.list-view{
+        -fx-background-insets: 0, 0, 0;
+}
+
+
+

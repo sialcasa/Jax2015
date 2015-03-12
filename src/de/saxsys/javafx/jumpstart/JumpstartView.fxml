@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -9,9 +10,9 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxWidth="1.7976931348623157E308" stylesheets="@JumpstartView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.saxsys.javafx.jumpstart.JumpstartView">
+<VBox fillWidth="false" maxWidth="1.7976931348623157E308" stylesheets="@JumpstartView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.saxsys.javafx.jumpstart.JumpstartView">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+    <MenuBar focusTraversable="false" VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
@@ -56,31 +57,56 @@
                <children>
                   <VBox styleClass="containerspacing" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <fx:include fx:id="import_createPerson" source="createperson/CreatePersonView.fxml" />
-                        <fx:include fx:id="import_displayPersons" source="displaypersons/DisplayPersonView.fxml" />
-                     </children>
-                  </VBox>
-                  <TabPane tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
-                    <tabs>
-                      <Tab text="Sammeln">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                        <TitledPane animated="true" text="Person anlegen">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0">
                                  <children>
-                                    <fx:include fx:id="import_crawler" source="datacrawler/CrawlView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <fx:include fx:id="import_createPerson" source="createperson/CreatePersonView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                  </children>
                               </AnchorPane>
-                        </content>
-                      </Tab>
-                      <Tab text="Auswerten">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="true" text="Personen Auswählen">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0">
                                  <children>
-                                    <fx:include fx:id="import_crawlResults" source="crawlresults/CrawlResultsView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                 </children></AnchorPane>
-                        </content>
-                      </Tab>
-                    </tabs>
-                  </TabPane>
+                                    <fx:include fx:id="import_displayPersons" source="displaypersons/DisplayPersonView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+                  <TitledPane animated="true" maxHeight="1.7976931348623157E308" styleClass="noanchorpadding" text="Person recherchieren" HBox.hgrow="ALWAYS">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <tabs>
+                                  <Tab text="Sammeln">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                                             <children>
+                                                <fx:include fx:id="import_crawler" source="datacrawler/CrawlView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Auswerten">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                                             <children>
+                                                <fx:include fx:id="import_crawlResults" source="crawlresults/CrawlResultsView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
                </children>
                <styleClass>
                   <String fx:value="containerpadding" />
