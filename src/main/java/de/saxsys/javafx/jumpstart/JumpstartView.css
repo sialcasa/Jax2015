@@ -2,7 +2,7 @@
     -my-color:rgb(141,162,188);
     -fx-outer-border: -my-color;
     -fx-inner-border: -my-color;
-    
+
     -fx-base:rgb(230,230,230);
     -fx-focus-color:rgb(239,220,200);
     -button-color:lightgray;
@@ -123,5 +123,61 @@
         -fx-background-insets: 0, 0, 0;
 }
 
+
+/*
+ *Scrollbar
+ */
+ 
+ .scroll-bar:vertical > .track-background,
+.scroll-bar:horizontal > .track-background{
+    -fx-background-color: derive(-my-color,50%);
+    -fx-background-insets: 0.0;
+}
+
+.scroll-bar:vertical > .thumb,
+.scroll-bar:horizontal > .thumb {
+    -fx-background-color: -my-color;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+}
+
+.scroll-bar > .increment-button, 
+.scroll-bar > .decrement-button,
+.scroll-bar:hover > .increment-button, 
+.scroll-bar:hover > .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: white;
+}
+
+.scroll-bar > .track-background{
+    -fx-background-color:transparent;
+}
+
+/*
+ * CHOICE
+ */
+ 
+.context-menu {
+    -fx-background-color:-my-color;
+    -fx-background-insets: 0;
+    -fx-padding: 0.333333em 0.083333em 0.333333em 0.083333em; /* 4 1 8 1 */
+    -fx-effect: null;
+}
+.context-menu .separator:horizontal .line {
+    -fx-border-color: -fx-box-border transparent transparent transparent;
+    -fx-border-insets: 1 0 0 0;
+}
+
+/*
+ * 
+ */
+ 
+ .text-input {
+    -fx-background-color: derive(-my-color,+65%);
+}
 
 
