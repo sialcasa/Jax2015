@@ -51,13 +51,17 @@ public class CrawlView {
                 .documentProperty()
                 .addListener(
                         (ChangeListener<Document>) (observable, oldValue, newValue) -> {
-                            executejQuery(wv_personinfo.getEngine(), "$(document).click(function(event){"
-                                    + "event.target.getStyleObject();" + "return false;" + "});");
+                            executejQuery(wv_personinfo.getEngine(), "");
+                            wv_personinfo.getEngine().executeScript(Scripts.getStyleObject);
+                            wv_personinfo.getEngine().executeScript(
+                                    "$(document).click(function(event) {"
+                                            + "$(event.target).closest('div').each(function() {"
+                                            + "var style = $(this).getStyleObject();" + "java.target(style);" + "});"
+                                            + "return false;" + "});");
 
                             JSObject jsobj = (JSObject) wv_personinfo.getEngine().executeScript("window");
                             jsobj.setMember("java", new Bridge());
 
-                            executejQuery(wv_personinfo.getEngine(), Scripts.getStyleObject);
                         });
 
         pi_loading.visibleProperty().bind(
@@ -78,7 +82,7 @@ public class CrawlView {
     }
 
     public class Bridge {
-        public void target(String content) {
+        public void target(JSObject content) {
             System.out.println(content);
         }
     }

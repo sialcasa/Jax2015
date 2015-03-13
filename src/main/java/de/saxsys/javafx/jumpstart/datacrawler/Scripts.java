@@ -6,9 +6,7 @@ public class Scripts {
             + "$(event.target).closest('div').each(function(){document.write($(this).html())}); return false;" + "});";
 
     static String script = "$(\"a\").click(function(event){" + "event.stopPropagation();"
-            + "document.write(event.target);"
-            // + "$(event.target).each(function(){alert(this);});"
-            + "});";
+            + "document.write(event.target);" + "var style = $(this).getStyleObject();" + "java.target(style);" + "});";
 
     static String getStyleObject = "$.fn.getStyleObject = function() {\n" + " var dom = this.get(0);\n"
             + " var style;\n" + " var returns = {};\n" + " if (window.getComputedStyle) {\n"
