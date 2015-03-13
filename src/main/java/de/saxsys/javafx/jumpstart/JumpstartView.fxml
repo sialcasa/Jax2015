@@ -60,7 +60,7 @@
                               </AnchorPane>
                           </content>
                         </TitledPane>
-                        <TitledPane animated="true" text="Personen Auswählen">
+                        <TitledPane animated="true" text="Personen auswählen">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0">
                                  <children>
