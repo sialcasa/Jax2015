@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
 <?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 
-<VBox fillWidth="false" maxWidth="1.7976931348623157E308" stylesheets="@JumpstartView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.saxsys.javafx.jumpstart.JumpstartView">
+<VBox maxWidth="1.7976931348623157E308" stylesheets="@JumpstartView.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.saxsys.javafx.jumpstart.JumpstartView">
   <children>
     <MenuBar focusTraversable="false" VBox.vgrow="NEVER">
       <menus>
@@ -51,7 +45,7 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <HBox maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
@@ -77,7 +71,7 @@
                         </TitledPane>
                      </children>
                   </VBox>
-                  <TitledPane animated="true" maxHeight="1.7976931348623157E308" styleClass="noanchorpadding" text="Person recherchieren" HBox.hgrow="ALWAYS">
+                  <TitledPane animated="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="noanchorpadding" text="Person recherchieren" HBox.hgrow="ALWAYS">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
